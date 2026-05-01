@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohini P | UI/UX Designer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== GLOBAL ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+  background: radial-gradient(circle at top, #1a1a2e, #0b0b17);
+  color:#fff;
+  line-height:1.5;
+  scroll-behavior:smooth;
+}
+
+/* ===== NAV ===== */
+nav{
+  position:fixed;
+  width:100%;
+  padding:12px 6%;
+  display:flex;
+  justify-content:space-between;
+  backdrop-filter:blur(12px);
+  background:rgba(255,255,255,0.05);
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  z-index:1000;
+}
+nav ul{display:flex;gap:18px;list-style:none;}
+nav a{color:#fff;text-decoration:none;font-size:13px;}
+nav a:hover{color:#00f5d4;}
+
+/* ===== HERO ===== */
+.hero{padding:100px 6% 30px;display:flex;align-items:center;}
+.hero-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+  gap:40px;
+}
+
+.hero-text h1{font-size:40px;}
+.hero-text span{
+  background:linear-gradient(270deg,#7f5af0,#00f5d4,#7f5af0);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.hero-text p{color:#bbb;font-size:14px;margin:8px 0;}
+
+.hero-image img{
+  width:170px;height:170px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #7f5af0;
+}
+
+/* ===== SECTION ===== */
+section{padding:18px 6%;border-bottom:1px solid rgba(255,255,255,0.05);}
+h2{font-size:16px;margin-bottom:6px;color:#a78bfa;}
+
+.small{font-size:13px;color:#bbb;}
+
+/* ===== CARD ===== */
+.card{
+  background:rgba(255,255,255,0.04);
+  padding:12px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.08);
+  transition:0.3s;
+}
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 20px rgba(127,90,240,0.4);
+}
+
+/* ===== PROJECT FIX ===== */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+/* IMAGE CONTAINER */
+.project-media{
+  width:100%;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  border-radius:8px;
+  margin-bottom:6px;
+}
+
+/* IMAGE FIT */
+.project-media img,
+.project-media video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:0.3s;
+}
+
+.project:hover .project-media img,
+.project:hover .project-media video{
+  transform:scale(1.08);
+}
+
+/* ===== SKILLS ===== */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
+.skill{
+  background:#27274a;
+  padding:4px 10px;
+  border-radius:12px;
+  font-size:12px;
+}
+
+/* ===== CONTACT ===== */
+.contact-links{
+  margin-top:10px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.contact-links a{
+  padding:6px 12px;
+  background:#27274a;
+  border-radius:8px;
+  font-size:12px;
+  text-decoration:none;
+  color:#fff;
+}
+.contact-links a:hover{background:#7f5af0;}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .hero-container{flex-direction:column;text-align:center;}
+  .projects{grid-template-columns:1fr;}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+  <h3>Portfolio</h3>
+  <ul>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+<div class="hero-container">
+
+<div class="hero-text">
+<h1>I am <span id="typing"></span></h1>
+<p>UI/UX Designer creating intuitive and modern experiences.</p>
+<p class="small">📧 727623BIT020@mcet.in | 📞 9994323736</p>
+</div>
+
+<div class="hero-image">
+<img src="images/profile.jpg">
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Objective</h2>
+<p class="small">Motivated fresher with hands-on UI/UX experience and passion for intuitive design.</p>
+</section>
+
+<section>
+<h2>Area of Interest</h2>
+<div class="skills">
+<div class="skill">UI/UX Design</div>
+<div class="skill">Graphic Design</div>
+<div class="skill">Web Development</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="projects">
+
+<div class="card project">
+<div class="project-media">
+  <video controls>
+<source src="images/food delivery app - Google Chrome 2026-05-01 11-06-11.mp4">
+</video>
+</div>
+<b>Food Delivery App</b>
+<p class="small">End-to-end UI flow.</p>
+</div>
+
+<div class="card project">
+<div class="project-media">
+<video controls>
+<source src="images/motion.mp4">
+</video>
+</div>
+<b>Product Motion Design</b>
+<p class="small">Smooth UI animation.</p>
+</div>
+
+<div class="card project">
+<div class="project-media">
+<img src="images/ecommerce.jpg">
+</div>
+<b>E-commerce UI</b>
+<p class="small">User-friendly layout.</p>
+</div>
+
+<div class="card project">
+<div class="project-media">
+<img src="images/thumbnail.jpg">
+</div>
+<b>Thumbnail Design</b>
+<p class="small">Creative visuals.</p>
+</div>
+
+<div class="card project">
+<div class="project-media">
+<img src="images/logo.jpg">
+</div>
+<b>Logo Design</b>
+<p class="small">Brand identity design.</p>
+</div>
+
+</div>
+</section>
+
+<section id="skills">
+<h2>Technical Skills</h2>
+<div class="skills">
+<div class="skill">Java</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">SQL</div>
+<div class="skill">Figma</div>
+<div class="skill">Canva</div>
+<div class="skill">GitHub</div>
+</div>
+</section>
+
+<section>
+<h2>Soft Skills</h2>
+<div class="skills">
+<div class="skill">Communication</div>
+<div class="skill">Problem Solving</div>
+<div class="skill">Adaptability</div>
+<div class="skill">Quick Learner</div>
+</div>
+</section>
+
+<section>
+<h2>Education</h2>
+<p class="small">
+B.Tech IT – MCET (2027) | CGPA: 8.38 <br>
+HSC – 89% (2023) <br>
+SSLC – All Pass (2021)
+</p>
+</section>
+
+<section>
+<h2>Internship</h2>
+<p class="small">UI/UX Intern – PROFENNA INFOTECH (May 2025)</p>
+</section>
+
+<section>
+<h2>Certifications</h2>
+<p class="small">
+UX Design – Udemy <br>
+Graphic Design – Udemy
+</p>
+</section>
+
+<section>
+<h2>Achievement</h2>
+<p class="small">1st Prize – AnalytIQ Arena (2026)</p>
+</section>
+
+<section>
+<h2>Extracurricular</h2>
+<p class="small">NSS Volunteer & UI/UX Fest Participant</p>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+<p class="small"><b>Email:</b> 727623BIT020@mcet.in</p>
+<p class="small"><b>Phone:</b> 9994323736</p>
+
+<div class="contact-links">
+<a href="https://www.linkedin.com/in/rohini-p" target="_blank">LinkedIn</a>
+<a href="https://github.com/Rohinipanjalingam" target="_blank">GitHub</a>
+<a href="https://leetcode.com/u/727623bit020-mcet/" target="_blank">LeetCode</a>
+</div>
+
+</div>
+</section>
+
+<script>
+const text="Rohini P | UI/UX Designer";
+let i=0;
+function type(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text[i];
+i++;
+setTimeout(type,50);
+}}
+type();
+</script>
+
+</body>
+</html>
